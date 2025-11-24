@@ -14,9 +14,10 @@ public class App {
         Game game = new Game();
 
         // 3. Connect Models and Views with Controllers
-        TargetGridController tgc = new TargetGridController(gameWindow.getTargetPanel(), game.getHumanTargetGrid(), game.getHumanPlayer());
-        StatusController sc = new StatusController(gameWindow.getStatusPane(), game);
-        OceanGridController ogc = new OceanGridController(gameWindow.getOceanPanel(), game.getHumanOceanGrid());
+        new TargetGridController(gameWindow.getTargetPanel(),game.getHumanTargetGrid(),game.getHumanPlayer());
+        new StatusController(gameWindow.getStatusPane(),game);
+        new OceanGridController(gameWindow.getOceanPanel(),game.getHumanOceanGrid());
+
 
         gameWindow.setVisible(true);
         gameWindow.pack();

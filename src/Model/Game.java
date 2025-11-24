@@ -47,6 +47,7 @@ public class Game implements ShotDelegate {
         listeners.add(toAdd);
     }
 
+    @Override
     public void handleShot(Coordinate shot, Object sender){
         // must be this player's turn
         if(sender != currentPlayer){
