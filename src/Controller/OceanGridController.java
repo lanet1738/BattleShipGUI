@@ -17,7 +17,7 @@ public class OceanGridController {
         modelListener = new OceanGridListener();
         this.model.addListener(modelListener);
 
-        // initial paint with current grid state (ships)
+        // initial paint with current grid state
         view.setGridRep(new GridRep(model));
     }
 
