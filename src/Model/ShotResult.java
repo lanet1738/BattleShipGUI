@@ -13,7 +13,7 @@ public enum ShotResult {
     public Coordinate getLocation() {
         return location;
     }
-    //public void setLocation(Coordinate location) {
+    public void setLocation(Coordinate location) {
         this.location = location;
     }
     public String getShipName() {
