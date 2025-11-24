@@ -3,8 +3,6 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.AutomaticShipFactory;
-
 public class Game implements ShotDelegate {
     private HumanPlayer humanPlayer;
     private Player computerPlayer;
