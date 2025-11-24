@@ -11,17 +11,17 @@ public class Game implements ShotDelegate {
     private List<StatusListener> listeners = new ArrayList<>();
 
     public Game(){
-        // set up...
+        // set up
         humanPlayer = new HumanPlayer("Human", new AutomaticShipFactory(), this);
         computerPlayer = new EasyAIPlayer(new AutomaticShipFactory(), this);
     }
 
     public void start(){
-        // place fleets
+        //place fleets
         humanPlayer.placeShips();
         computerPlayer.placeShips();
 
-        // ... and go!
+        //and go!
         currentPlayer = humanPlayer;
         otherPlayer = computerPlayer;
         currentPlayer.takeShot();
