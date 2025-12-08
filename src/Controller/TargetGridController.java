@@ -34,6 +34,16 @@ public class TargetGridController {
         view.setGridRep(new GridRep(model));
     }
 
+    public void disconnect(){
+        model.removeListener(modelListener);
+        view.removeMouseListener(viewListener);
+        viewListener = null;
+        modelListener = null;
+        view = null;
+        model = null;
+        shooter = null;
+    }
+
     private class GridPanelListener extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {

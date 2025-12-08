@@ -1,6 +1,8 @@
 package Model;
 
-public class TargetGrid extends Grid implements ShotDelegate {
+import java.io.Serializable;
+
+public class TargetGrid extends Grid implements ShotDelegate, Serializable {
     ShotDelegate shotDelegate;
     
     public TargetGrid(ShotDelegate delegate){
