@@ -1,6 +1,8 @@
 package Model;
 
-public class HumanPlayer implements Player, ShotDelegate {
+import java.io.Serializable;
+
+public class HumanPlayer implements Player, ShotDelegate, Serializable {
     private String name;
     private OceanGrid oceanGrid;
     private TargetGrid targetGrid;

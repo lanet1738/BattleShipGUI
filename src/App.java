@@ -2,6 +2,7 @@ import Model.Game;
 import Controller.TargetGridController;
 import Controller.StatusController;
 import Controller.OceanGridController;
+import Controller.WindowController;
 import View.GameWindow;
 import Model.GridRep;
 
@@ -9,15 +10,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         // 1. Build out the view layer...
         GameWindow gameWindow = new GameWindow("Battleship");
-
-        // 2. Build out the Model layer...
         Game game = new Game();
-
-        // 3. Connect Models and Views with Controllers
-        new TargetGridController(gameWindow.getTargetPanel(),game.getHumanTargetGrid(),game.getHumanPlayer());
-        new StatusController(gameWindow.getStatusPane(),game);
-        new OceanGridController(gameWindow.getOceanPanel(),game.getHumanOceanGrid());
-
+        new WindowController(gameWindow, game);
 
         gameWindow.setVisible(true);
         gameWindow.pack();

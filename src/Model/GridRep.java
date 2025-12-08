@@ -1,6 +1,8 @@
 package Model;
 
-public class GridRep {
+import java.io.Serializable;
+
+public class GridRep implements Serializable {
     private Grid grid;
 
     public GridRep(Grid grid){

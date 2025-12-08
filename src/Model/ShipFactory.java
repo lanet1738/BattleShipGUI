@@ -1,11 +1,12 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 import Util.Constants;
 
-public abstract class ShipFactory {
+public abstract class ShipFactory implements Serializable {
 
     protected List<Ship> ships = new ArrayList<>();
 
